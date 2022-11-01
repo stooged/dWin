@@ -17,28 +17,30 @@ void read_Serial() {
 
   if ((Data[0] << 8) | Data[1] == FrameHeader) {
     switch ((Data[4] << 8) | Data[5]) {
-      case 0x5600:
-        break;
-      case 0x5500:
-        Serial.println("5500 key");
+      case 0x5500: //vp
+	  
+        Serial.println("5500 vp");
         ll++;
         dwin.setText(0x0A00, String(ll).c_str());
 
-        Serial.println(dwin.read_vp(0x0B00));
+       // Serial.println(dwin.read_vp(0x0B00));  // read a value from a set vp
 
-        //  dwin.setPage(2);
+        //  dwin.setPage(2);  // change page/image
 
-        //dwin.setBrightness(80,30,1);
+        //dwin.setBrightness(80,30,1);  // set backlight brightness
 
         dwin.set4bLong(0x0B00, ll);
         break;
-      case 0x0002:
-        // Serial.println("0002 key");
+      case 0x0002: //vp
+	  
+        // Serial.println("0002 vp");
         ii++;
         dwin.setText(0x0A00, String(ii).c_str());
         dwin.set2bInt(0x0C00, ii);
         break;
-      case 0x1003:
+      case 0x1003: //vp
+	    // Serial.println("1003 vp");
+	  
         dwin.setText(0x0A00, "hello world");
         break;
     }
@@ -65,7 +67,7 @@ void setup() {
 
 void loop() {
   if (LCD_Serial.available() > 0) {
-    read_Serial();
+    read_Serial();  // read data sent from lcd 
   }
   delay(100);
   update_values();
