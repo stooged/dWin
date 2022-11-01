@@ -17,8 +17,8 @@ read_vp                     KEYWORD2
 setPage                     KEYWORD2
 clearText                   KEYWORD2
 setText                     KEYWORD2
-set4bLong                     KEYWORD2
-set2bInt                      KEYWORD2
+set4bLong                   KEYWORD2
+set2bInt                    KEYWORD2
 resetDisplay                KEYWORD2
 setOrientation              KEYWORD2
 setBrightness               KEYWORD2
