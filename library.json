@@ -1,0 +1,33 @@
+{
+	"name": "dWin",
+	"version": "1.0.0",
+	"keywords": "LCD, dWin, Touch, Screen",
+	"description": "Dwin LCD Screen Library.",
+	"authors": [
+		{
+			"name": "Stooged",
+			"email": "",
+			"url": "https://github.com/stooged"
+		}
+	],
+	"license": "MIT",
+	"frameworks": "arduino",
+	"headers": "dWin.h",
+	"platforms": [
+		"atmelavr",
+		"atmelmegaavr"
+	],
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/stooged/dWin.git"
+	},
+	"examples": [
+		{
+			"name": "Test",
+			"base": "examples/test",
+			"files": [
+				"test.ino"
+			]
+		}
+	]
+}
