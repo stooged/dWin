@@ -1,8 +1,8 @@
 {
 	"name": "dWin",
 	"version": "1.0.0",
-	"keywords": "LCD, dWin, Touch, Screen",
-	"description": "Dwin LCD Screen Library.",
+	"keywords": "LCD, dWin, Touch, T5L",
+	"description": "Dwin T5L Screen Library.",
 	"authors": [
 		{
 			"name": "Stooged",
